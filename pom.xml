@@ -42,7 +42,8 @@
                         <inherited>false</inherited>
                         <configuration>
                             <!-- From Email address -->
-                            <from>syntester0077@gmail.com</from>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <from>${emailUser}</from>
                             <!-- Email subject -->
                             <subject>Test Report</subject>
                             <failonerror>false</failonerror>
@@ -58,8 +59,10 @@
                             <mailport>465</mailport>
                             <mailssl>true</mailssl>
                             <mailAltConfig>true</mailAltConfig>
-                            <mailuser>syntester0077@gmail.com</mailuser>
-                            <mailpassword>rud3bw0y123</mailpassword>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <mailuser>${emailUser}</mailuser>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <mailpassword>${pass}</mailpassword>
                             <receivers>
                                 <receiver>synhlee@gmail.com</receiver>
                             </receivers>
