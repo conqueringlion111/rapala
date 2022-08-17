@@ -7,13 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class Waits extends PageBase {
 
     public Waits(WebDriver driver) {
         super(driver);
     }
 
-    final int maxWait = 10;
+    final Duration maxWait = Duration.ofSeconds(12);
 
     public void waitForTextPresentInElementBy(By byLocator, String textPresense) {
         WebDriverWait wait = new WebDriverWait(driver, maxWait);

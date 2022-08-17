@@ -4,7 +4,7 @@
     <test name = "regression">
         <groups>
             <define name="Lures">
-                <include name = "lure"/>
+                <include name = "lures"/>
             </define>
         </groups>
         <packages>
