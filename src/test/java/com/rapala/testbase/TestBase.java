@@ -24,21 +24,39 @@ public class TestBase {
     protected WebDriver driver;
     protected HomePage homepage;
     protected static Properties testConfig;
-    public String baseUrl;
-
-    @BeforeSuite()
+    protected String baseUrl;
+    protected String email;
+    protected String password;
+    @BeforeSuite(alwaysRun = true)
     public void beforSuite() throws FileNotFoundException, IOException {
         testConfig = new Properties();
         testConfig.load(new FileInputStream("UITestConfig.properties"));
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     @Parameters({"browserRemote"})
-
     public void beforeMethod(@Optional String browserRemote) throws MalformedURLException, InstantiationException, IllegalAccessException
     {
         driver = WebDriverSetUp.createDriver(testConfig.getProperty("browser"), testConfig.getProperty("runFromSuite"), browserRemote);
-        baseUrl = testConfig.getProperty("baseUrl");
+        if(System.getProperty("test.env") != null) {
+            baseUrl = System.getProperty("test.env");
+        }
+        else {
+            baseUrl = testConfig.getProperty("baseUrl");
+        }
+        if(System.getProperty("email") != null) {
+            email = System.getProperty("email");
+        }
+        else {
+            email = testConfig.getProperty("email");
+        }
+        if(System.getProperty("password") != null) {
+            password = System.getProperty("password");
+        }
+        else {
+            password = testConfig.getProperty("password");
+        }
+
         driver.get(baseUrl);
         homepage = new HomePage(driver);
     }
@@ -50,7 +68,7 @@ public class TestBase {
         testConfig.load(new FileInputStream("TestConfig.properties"));
         String name = getClass().getName();
         String fileName = name.substring(name.lastIndexOf(".") + 1).trim();
-        return JsonReader.getdata(testConfig.getProperty("jsonDataLocation").concat(fileName).concat(".json"), method.getName());
+        return JsonReader.getdata(testConfig.getProperty("dataLocation").concat(fileName).concat(".json"), method.getName());
     }
 
     @AfterMethod
