@@ -12,7 +12,6 @@ import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
@@ -27,10 +26,11 @@ public class TestBase {
     protected String baseUrl;
     protected String email;
     protected String password;
+    protected String myPassword;
     @BeforeSuite(alwaysRun = true)
-    public void beforSuite() throws FileNotFoundException, IOException {
+    public void beforSuite() throws IOException {
         testConfig = new Properties();
-        testConfig.load(new FileInputStream("UITestConfig.properties"));
+        testConfig.load(new FileInputStream("TestConfig.properties"));
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -56,7 +56,12 @@ public class TestBase {
         else {
             password = testConfig.getProperty("password");
         }
-
+        if(System.getProperty("myPassword") != null) {
+            myPassword = System.getProperty("myPassword");
+        }
+        else {
+            myPassword = testConfig.getProperty("myPassword");
+        }
         driver.get(baseUrl);
         homepage = new HomePage(driver);
     }
@@ -74,12 +79,10 @@ public class TestBase {
     @AfterMethod
     public void afterMethod(ITestResult result) throws Exception
     {
-
         if(ITestResult.FAILURE==result.getStatus()) {
             try{
                 TakesScreenshot screenshot = (TakesScreenshot)driver;
                 File srs = screenshot.getScreenshotAs(OutputType.FILE);
-
                 String osName = System.getProperty("os.name");
                 System.out.println(System.getProperty("os.name"));
                 if(osName.contains("Windows")) {
