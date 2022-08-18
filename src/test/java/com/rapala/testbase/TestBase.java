@@ -76,7 +76,7 @@ public class TestBase {
         return JsonReader.getdata(testConfig.getProperty("dataLocation").concat(fileName).concat(".json"), method.getName());
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void afterMethod(ITestResult result) throws Exception
     {
         if(ITestResult.FAILURE==result.getStatus()) {
