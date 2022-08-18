@@ -1,3 +1,15 @@
-{
+{ "verifyNavigationToPerchLuresPageSuccessful"  :
+        [
+          {
+            "expectedTitle" : "PERCH LURES"
+          }
+        ],
+
+  "verifyNavigationToPerchLuresPageSuccessfulV2"  :
+          [
+            {
+              "expectedTitle" : "PERCH LURES"
+            }
+          ]
 
 }

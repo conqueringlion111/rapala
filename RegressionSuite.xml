@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite" parallel="tests" thread-count="3">
+    <test name="test group 1">
+        <parameter name="browserRemote" value="firefoxRemote"/>
+        <classes>
+            <class name="com.rapala.uitests.PerchLuresTests"/>
+        </classes>
+    </test>
+    <test name="test group 2">
+        <parameter name="browserRemote" value="chromeRemote"/>
+        <classes>
+            <class name="com.rapala.uitests.PerchLuresTests"/>
+        </classes>
+    </test>
+</suite>
