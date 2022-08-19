@@ -1,0 +1,14 @@
+{
+  "verifyNavigateToToolsPageSuccessful"  :
+  [
+    {
+      "expectedTitle" : "TOOLS"
+    }
+  ],
+  "verifyNavigateToToolsPageSuccessfulV2"  :
+  [
+    {
+      "expectedTitle" : "TOOLS"
+    }
+  ]
+}

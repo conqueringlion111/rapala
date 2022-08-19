@@ -12,4 +12,10 @@
             <class name="com.rapala.uitests.PerchLuresTests"/>
         </classes>
     </test>
+    <test name="test group 3">
+        <parameter name="browserRemote" value="firefoxRemote"/>
+        <classes>
+            <class name="com.rapala.uitests.ToolsTests"/>
+        </classes>
+    </test>
 </suite>

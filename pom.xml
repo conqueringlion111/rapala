@@ -54,7 +54,7 @@
 								]]>
                             </htmlMessage>
                             <!-- host -->
-                            <mailhost>smtp.gmail.com</mailhost>
+                            <mailhost>smtp.mail.yahoo.com</mailhost>
                             <!-- port of the host -->
                             <mailport>465</mailport>
                             <mailssl>true</mailssl>
@@ -102,7 +102,6 @@
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
                 <version>7.6.1</version>
-                <scope>test</scope>
             </dependency>
             <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
             <dependency>
@@ -120,12 +119,6 @@
                 <groupId>io.github.bonigarcia</groupId>
                 <artifactId>webdrivermanager</artifactId>
                 <version>5.2.3</version>
-            </dependency>
-            <dependency>
-                <groupId>org.testng</groupId>
-                <artifactId>testng</artifactId>
-                <version>6.14.3</version>
-                <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>

@@ -6,6 +6,7 @@
         <groups>
             <define name="Lures">
                 <include name = "lures"/>
+                <include name = "tools"/>
             </define>
         </groups>
         <packages>

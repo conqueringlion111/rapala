@@ -20,4 +20,10 @@ public class HomePage extends PageBase {
         return new PerchLuresPage(driver);
     }
 
+    public ToolsPage navigateToToolsPage() {
+        SeleniumMethods sel = new SeleniumMethods(driver);
+        sel.selClickBy(HomePageLocators.TOOLS_BUTTON_X);
+        return new ToolsPage(driver);
+    }
+
 }
