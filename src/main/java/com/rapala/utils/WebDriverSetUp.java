@@ -116,7 +116,7 @@ public class WebDriverSetUp {
                 throw new InvalidParameterException(browser + "- is not a valid web browser for web driver.");
             }
         }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         return driver;
     }
 

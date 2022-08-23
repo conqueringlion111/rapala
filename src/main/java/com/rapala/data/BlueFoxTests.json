@@ -1,0 +1,14 @@
+{
+  "verifyNavigateToBlueFoxPageViaBottomLinkSuccessful"  :
+  [
+    {
+      "expectedTitle" : "Blue Fox"
+    }
+  ],
+  "verifyNavigateToBlueFoxPageViaTopLinkSuccessful"  :
+  [
+    {
+      "expectedTitle" : "Home Page - Blue fox"
+    }
+  ]
+}

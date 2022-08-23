@@ -7,6 +7,7 @@
             <define name="Lures">
                 <include name = "lures"/>
                 <include name = "tools"/>
+                <include name = "bluefox"/>
             </define>
         </groups>
         <packages>

@@ -15,7 +15,7 @@ public class Waits extends PageBase {
         super(driver);
     }
 
-    final Duration maxWait = Duration.ofSeconds(12);
+    final Duration maxWait = Duration.ofSeconds(45);
 
     public void waitForTextPresentInElementBy(By byLocator, String textPresense) {
         WebDriverWait wait = new WebDriverWait(driver, maxWait);
@@ -24,13 +24,13 @@ public class Waits extends PageBase {
 
     public void waitForVisibilityOfElementBy(By byLocator) {
         WebDriverWait wait = new WebDriverWait(driver, maxWait);
-        WebElement element = wait.until(ExpectedConditions.visibilityOf(driver.findElement(byLocator)));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(byLocator)));
     }
 
 
     public void waitForPresenseOfElementBy(By byLocator) {
         WebDriverWait wait = new WebDriverWait(driver, maxWait);
-        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(byLocator));
+        wait.until(ExpectedConditions.presenceOfElementLocated(byLocator));
     }
 
     public void waitForInvisibilityOfWElementBy(By byLocator) {
@@ -40,12 +40,12 @@ public class Waits extends PageBase {
 
     public void waitForElementClickable(WebElement webElemLoc) {
         WebDriverWait wait = new WebDriverWait(driver, maxWait);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(webElemLoc));
+        wait.until(ExpectedConditions.elementToBeClickable(webElemLoc));
     }
 
     public void waitForElementClickableBy(By byElemLoc) {
         WebDriverWait wait = new WebDriverWait(driver, maxWait);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(byElemLoc));
+        wait.until(ExpectedConditions.elementToBeClickable(byElemLoc));
     }
 
 }

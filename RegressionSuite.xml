@@ -1,27 +1,39 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="My Test Suite" parallel="tests" thread-count="3">
-    <test name="test group 1">
+    <test name="test group 1 firefox">
         <parameter name="browserRemote" value="firefoxRemote"/>
         <classes>
             <class name="com.rapala.uitests.PerchLuresTests"/>
         </classes>
     </test>
-    <test name="test group 2">
+    <test name="test group 2 chrome">
         <parameter name="browserRemote" value="chromeRemote"/>
         <classes>
             <class name="com.rapala.uitests.PerchLuresTests"/>
         </classes>
     </test>
-    <test name="test group 3">
+    <test name="test group 3 firefox">
         <parameter name="browserRemote" value="firefoxRemote"/>
         <classes>
             <class name="com.rapala.uitests.ToolsTests"/>
         </classes>
     </test>
-    <test name="test group 4">
+    <test name="test group 4 chrome">
         <parameter name="browserRemote" value="chromeRemote"/>
         <classes>
             <class name="com.rapala.uitests.ToolsTests"/>
+        </classes>
+    </test>
+    <test name="test group 5 firefox">
+        <parameter name="browserRemote" value="firefoxRemote"/>
+        <classes>
+            <class name="com.rapala.uitests.BlueFoxTests"/>
+        </classes>
+    </test>
+    <test name="test group 6 chrome">
+        <parameter name="browserRemote" value="chromeRemote"/>
+        <classes>
+            <class name="com.rapala.uitests.BlueFoxTests"/>
         </classes>
     </test>
 </suite>
