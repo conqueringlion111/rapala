@@ -16,4 +16,6 @@ public class HomePageLocators extends PageBase {
     public static final By BAGS_BUTTON_X = By.xpath("//span[@class='category-name'][contains(text(),'Bags')]");
     public static final By ICE_BUTTON_X = By.xpath("//span[@class='category-name'][contains(text(),'Ice')]");
     public static final By NEW_ARRIVALS_BUTTON_X = By.xpath("//span[@class='category-name'][contains(text(),'New Arrivals')]");
+    public static final By BLUE_FOX_LINK_TOP_X = By.xpath("//a[@href='/eu_en/blue-fox']");
+    public static final By BLUE_FOX_LINK_BOTTOM_X = By.xpath("(//a[contains(@title,'Vibrax')])[2]");
 }

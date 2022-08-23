@@ -26,4 +26,23 @@ public class HomePage extends PageBase {
         return new ToolsPage(driver);
     }
 
+    public BlueFoxPage navigateToBlueFoxPageViaBottomLink() {
+        SeleniumMethods sel = new SeleniumMethods(driver);
+        sel.jsScroll(HomePageLocators.BLUE_FOX_LINK_BOTTOM_X);
+        sel.clickBy(HomePageLocators.BLUE_FOX_LINK_BOTTOM_X);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return new BlueFoxPage(driver);
+    }
+
+    public BlueFoxPage navigateToBlueFoxPageViaTopLink() {
+        SeleniumMethods sel = new SeleniumMethods(driver);
+        sel.actionsMoveToElementBy(HomePageLocators.BLUE_FOX_LINK_TOP_X);
+        sel.selClickBy(HomePageLocators.BLUE_FOX_LINK_TOP_X);
+        return new BlueFoxPage(driver);
+    }
+
 }
