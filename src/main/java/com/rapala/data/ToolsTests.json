@@ -1,14 +1,22 @@
 {
-  "verifyNavigateToToolsPageSuccessful"  :
-  [
+  "verifyNavigateToToolsPageSuccessful": [
     {
-      "expectedTitle" : "TOOLS"
+      "expectedTitle": "TOOLS"
     }
   ],
-  "verifyNavigateToToolsPageSuccessfulV2"  :
-  [
+  "verifyNavigateToToolsPageSuccessfulV2": [
     {
-      "expectedTitle" : "TOOLS"
+      "expectedTitle": "TOOLS"
+    }
+  ],
+  "verifyTotalNumberOfItemsOnPage": [
+    {
+      "totalItems": "12"
+    }
+  ],
+  "verifyTotalNumberOfItemsOnPageV2": [
+    {
+      "totalItems": "12"
     }
   ]
 }
