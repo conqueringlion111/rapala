@@ -18,4 +18,10 @@
             <class name="com.rapala.uitests.ToolsTests"/>
         </classes>
     </test>
+    <test name="test group 4">
+        <parameter name="browserRemote" value="chromeRemote"/>
+        <classes>
+            <class name="com.rapala.uitests.ToolsTests"/>
+        </classes>
+    </test>
 </suite>
