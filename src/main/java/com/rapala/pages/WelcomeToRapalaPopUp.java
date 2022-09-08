@@ -11,8 +11,9 @@ public class WelcomeToRapalaPopUp extends PageBase {
         super(driver);
     }
 
+    SeleniumMethods sel = new SeleniumMethods(driver);
+
     public HomePage clickOnAcceptAllCookiesButton() {
-        SeleniumMethods sel = new SeleniumMethods(driver);
         sel.selClickBy(WelcomeToRapalaPopUpLocators.ACCEPT_ALL_COOKIES_BUTTON_X);
         return new HomePage(driver);
     }

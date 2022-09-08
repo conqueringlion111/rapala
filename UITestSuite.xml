@@ -2,11 +2,9 @@
 
 <suite name="Regression" >
     <test name = "regression">
-        <parameter name="browserRemote" value="firefoxRemote"/>
+        <parameter name="browserRemote" value="chromeRemote"/>
         <groups>
             <define name="Lures">
-                <include name = "lures"/>
-                <include name = "tools"/>
                 <include name = "bluefox"/>
             </define>
         </groups>

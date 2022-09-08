@@ -10,24 +10,23 @@ public class HomePage extends PageBase {
         super(driver);
     }
 
+    SeleniumMethods sel = new SeleniumMethods(driver);
+
     public WelcomeToRapalaPopUp navigateToWelcomeToRapalaPopUp() {
         return new WelcomeToRapalaPopUp(driver);
     }
 
     public PerchLuresPage navigateToPerchLuresPage() {
-        SeleniumMethods sel = new SeleniumMethods(driver);
         sel.selClickBy(HomePageLocators.PERCH_LURE_LINK_X);
         return new PerchLuresPage(driver);
     }
 
     public ToolsPage navigateToToolsPage() {
-        SeleniumMethods sel = new SeleniumMethods(driver);
         sel.selClickBy(HomePageLocators.TOOLS_BUTTON_X);
         return new ToolsPage(driver);
     }
 
     public BlueFoxPage navigateToBlueFoxPageViaBottomLink() {
-        SeleniumMethods sel = new SeleniumMethods(driver);
         sel.jsScroll(HomePageLocators.BLUE_FOX_LINK_BOTTOM_X);
         sel.clickBy(HomePageLocators.BLUE_FOX_LINK_BOTTOM_X);
         try {
@@ -39,7 +38,6 @@ public class HomePage extends PageBase {
     }
 
     public BlueFoxPage navigateToBlueFoxPageViaTopLink() {
-        SeleniumMethods sel = new SeleniumMethods(driver);
         sel.actionsMoveToElementBy(HomePageLocators.BLUE_FOX_LINK_TOP_X);
         sel.selClickBy(HomePageLocators.BLUE_FOX_LINK_TOP_X);
         return new BlueFoxPage(driver);
