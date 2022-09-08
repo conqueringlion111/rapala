@@ -11,8 +11,9 @@ public class ToolsPage extends PageBase {
         super(driver);
     }
 
+    SeleniumMethods sel = new SeleniumMethods(driver);
+
     public void verifyTotalNumberOfItemsAvailable(By locator, String totalItems) {
-        SeleniumMethods sel = new SeleniumMethods(driver);
         int totalCount = sel.findTotalElementCount(locator);
         Assert.assertTrue(totalCount >= Integer.parseInt(totalItems), "the expected number of items not available*");
     }

@@ -14,8 +14,9 @@ public class PageBase {
         this.driver = driver;
     }
 
+    SeleniumMethods sel = new SeleniumMethods(driver);
+
     public void verifyPageTitleValue(WebDriver driver, By locator, String value) {
-        SeleniumMethods sel = new SeleniumMethods(driver);
         Assert.assertEquals(sel.getText(locator), value, "The expected page title did not display");
     }
 

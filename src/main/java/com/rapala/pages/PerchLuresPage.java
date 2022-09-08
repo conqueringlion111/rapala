@@ -12,8 +12,9 @@ public class PerchLuresPage extends PageBase {
         super(driver);
     }
 
+    SeleniumMethods sel = new SeleniumMethods(driver);
+
     public PerchLuresPage verifyPageTitleValue(String value) {
-        SeleniumMethods sel = new SeleniumMethods(driver);
         Assert.assertEquals(sel.getText(PerchLuresPageLocators.PAGE_TITLE_CSS), value, "The expected page title did not display");
         return this;
     }

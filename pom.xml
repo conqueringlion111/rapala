@@ -54,9 +54,9 @@
 								]]>
                             </htmlMessage>
                             <!-- host -->
-                            <mailhost>smtp.mail.yahoo.com</mailhost>
+                            <mailhost>smtp-relay.sendinblue.com</mailhost>
                             <!-- port of the host -->
-                            <mailport>465</mailport>
+                            <mailport>587</mailport>
                             <mailssl>true</mailssl>
                             <mailAltConfig>true</mailAltConfig>
                             <!--suppress UnresolvedMavenProperty -->
